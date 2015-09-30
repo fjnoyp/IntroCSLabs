@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=startX\ startY\ endX\ endY\ tree\ canvasRef
+comment0.target=Trunk(double,\ double,\ double,\ double,\ TreeTall,\ objectdraw.DrawingCanvas)
+comment1.params=
+comment1.target=void\ run()
+comment2.params=dx\ dy
+comment2.target=void\ move(double,\ double)
+comment3.params=
+comment3.target=objectdraw.Location\ getEnd()
+comment4.params=x\ y
+comment4.target=void\ setEnd(double,\ double)
+numComments=5

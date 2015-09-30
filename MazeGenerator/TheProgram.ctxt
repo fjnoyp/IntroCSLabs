@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ begin()
+comment1.params=point
+comment1.target=void\ addNeighbors(IntPoint)
+numComments=2

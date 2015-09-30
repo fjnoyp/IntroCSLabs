@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=canvasRef
+comment0.target=PuzzleDialog(objectdraw.DrawingCanvas)
+comment1.params=theDisplay
+comment1.target=void\ createPuzzle(objectdraw.VisibleImage)
+comment1.text=\n\ \ \ \ Create\ a\ puzzle\ out\ of\ the\ visible\ image\ \n
+comment2.params=
+comment2.target=void\ createPuzzlePieces()
+comment3.params=pixels
+comment3.target=void\ divideImage(int[][])
+comment4.params=point
+comment4.target=objectdraw.VisibleImage\ imageSelected(objectdraw.Location)
+comment5.params=e
+comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.text=\n\ Handle\ both\ button\ events.\ \ Right\ now,\ we\ just\ close\n\ the\ dialog\ box\ by\ setting\ it\ to\ not\ be\ visible.\n
+comment6.params=e
+comment6.target=void\ stateChanged(javax.swing.event.ChangeEvent)
+numComments=7

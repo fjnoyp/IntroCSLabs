@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=segment\ theRest
+comment0.target=NonEmptyScribble(objectdraw.Line,\ ScribbleInterface)
+comment1.params=point
+comment1.target=boolean\ contains(objectdraw.Location)
+comment1.text=\n\ Returns\ true\ iff\ the\ scribble\ contains\ the\ point.\n
+comment2.params=xOffset\ yOffset
+comment2.target=void\ move(double,\ double)
+comment2.text=\n\ Move\ the\ scribble\ by\ xOffset\ in\ the\ x\ direction\n\ \ \ \ and\ yOffset\ in\ the\ y\ direction\n
+comment3.params=color
+comment3.target=void\ setColor(java.awt.Color)
+comment4.params=
+comment4.target=void\ removeFromCanvas()
+numComments=5

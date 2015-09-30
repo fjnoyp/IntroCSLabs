@@ -1,0 +1,32 @@
+Class documentation
+<---- javadoc command: ---->
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.6
+-classpath
+/Applications/BlueJ.app/Contents/Resources/Java/bluejcore.jar:/Applications/BlueJ.app/Contents/Resources/Java/junit-4.8.2.jar:/Applications/BlueJ.app/Contents/Resources/Java/userlib/cs134lib.jar:/Applications/BlueJ.app/Contents/Resources/Java/userlib/objectdraw.jar:/Network/Servers/cortland.cs.williams.edu/Volumes/Users3/16ksc2/cs134/Lab1 Kyle
+-d
+/Network/Servers/cortland.cs.williams.edu/Volumes/Users3/16ksc2/cs134/Lab1 Kyle/doc
+-encoding
+MacRoman
+-charset
+MacRoman
+-docletpath
+/Applications/BlueJ.app/Contents/Resources/Java/bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+/Network/Servers/cortland.cs.williams.edu/Volumes/Users3/16ksc2/cs134/Lab1 Kyle/NonEmptyScribble.java
+<---- end of javadoc command ---->
+Loading source file /Network/Servers/cortland.cs.williams.edu/Volumes/Users3/16ksc2/cs134/Lab1 Kyle/NonEmptyScribble.java...
+/Network/Servers/cortland.cs.williams.edu/Volumes/Users3/16ksc2/cs134/Lab1 Kyle/NonEmptyScribble.java:24: ';' expected
+    public boolean contains(Location point)/*
+                                           ^
+1 error

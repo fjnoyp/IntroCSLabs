@@ -1,0 +1,59 @@
+
+import objectdraw.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class CentipedeController extends WindowController implements KeyListener {
+    
+    // The height of the menu bar at the top of the window plus the height
+    // of a JLabel put in the south of the content pane.  You can use this
+    // constant to make a window big enough to hold a canvas of the desired
+    // size and the menu and JLabel.  This constant was created to work
+    // four our solution on Steve's Mac laptop --- you may wish to adjust 
+    // it if you are on a PC or decide to lay out the window differently.
+    private static final int MENU_AND_HEIGHT = 54;
+    
+
+    public void begin() {
+        // Make window large enough to hold canvas of desired size, the menu, and
+        //  a JLabel
+        this.setSize(Field.CANVAS_WIDTH, Field.CANVAS_HEIGHT + MENU_AND_HEIGHT);
+        
+        // Create the background for the game
+        new FilledRect(0, 0, Field.CANVAS_WIDTH, Field.CANVAS_HEIGHT, canvas);
+        
+        Container container = getContentPane();
+        // create game here ...
+        
+        
+        // set up key events.
+        canvas.addKeyListener(this);
+        container.addKeyListener(this);
+        container.requestFocus();
+        container.validate();
+    }
+
+
+    // Fill in this method as necessary.
+    public void keyPressed(KeyEvent event) {
+
+        if (event.getKeyCode() == KeyEvent.VK_LEFT) {
+
+        } else if (event.getKeyCode() == KeyEvent.VK_RIGHT) {
+
+        } else if (event.getKeyCode() == KeyEvent.VK_SPACE) {
+
+        }
+    }
+    
+    // Part of KeyListener, but we don't need 
+    // to do anything here
+    public void keyTyped(KeyEvent evt) {  }
+    
+    // Part of KeyListener, but we don't need 
+    // to do anything here
+    public void keyReleased(KeyEvent evt) {  }
+    
+    
+}

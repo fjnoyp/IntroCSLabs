@@ -1,0 +1,99 @@
+import objectdraw.*;
+import java.awt.*;
+ 
+/*
+ * Card
+ * A class to represent a Concentration card.  It appears as a framed square
+ * on the canvas, but it has a hidden picture that can be revealed by changing
+ * the Card's transparency.
+ * 
+ * Cards also support many of the common graphics operations, including move,
+ * moveTo, removeFromCanvas, etc.
+ */
+public class Card {
+
+    /*
+     * A Card consists of a frame, an image, and a covering filled rectangle.
+     * Make the cover transparent to have the image appear.
+     * (See the setCoverTransparency method below.)
+     */
+    private VisibleImage image;
+    private FilledRect cover;
+    private FramedRect frame;
+
+    // The color of Card covers
+    private static final int REDNESS = 200;
+    private static final int GREENNESS = 255;
+    private static final int BLUENESS = 255;
+    
+    // Constants to specify the cover should be 
+    //   completely opaque and completely transparent
+    public static final int OPAQUE = 255;
+    public static final int TRANSPARENT = 0;
+
+    /*
+     * Create a card at the given (x,y) location.  The card will be a square
+     * of size cardSize with cardPic as the hidden picture.  The image will be
+     * scaled to be exactly the same size as the card.
+     */
+    public Card(double x, double y, int cardSize, Image cardPic, DrawingCanvas canvas) {
+        image = new VisibleImage(cardPic,x,y,canvas);
+        image.setSize(cardSize, cardSize);
+        cover = new FilledRect(x,y,cardSize,cardSize,canvas);
+        this.setCoverTransparency(OPAQUE);
+        frame = new FramedRect(x,y,cardSize,cardSize,canvas);
+    }
+   
+    /*
+     * Returns the image on this card.
+     */
+    public Image getImage() {
+        return image.getImage();
+    }
+
+    /*
+     * Returns the location of the card on the canvas.
+     */
+    public Location getLocation() {
+        return image.getLocation();
+    }
+    
+    /*
+     * Moves the card in the x and y direction by the amounts specified as parameters.
+     */
+    public void move(double dx, double dy) {
+        image.move(dx,dy);
+        cover.move(dx,dy);
+        frame.move(dx,dy);
+    }
+    
+    /*
+     * Removes the card from the canvas it is currently on.
+     */
+    public void removeFromCanvas() {
+        image.removeFromCanvas();
+        cover.removeFromCanvas();
+        frame.removeFromCanvas();
+    }
+
+    /*
+     * Sends the card to the front.
+     */
+    public void sendToFront() {
+        image.sendToFront();
+        cover.sendToFront();
+        frame.sendToFront();
+    }
+
+    /*
+     * Returns whether the card contains the point.
+     */
+    public boolean contains(Location point) {
+        return image.contains(point);
+    }
+
+    public void setCoverTransparency(int alpha) {
+        Color c = new Color(REDNESS, GREENNESS, BLUENESS, alpha);
+        cover.setColor(c);
+    }
+}

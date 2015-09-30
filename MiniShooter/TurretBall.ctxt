@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ begin()
+comment0.text=\n\ \ \ \ //Create\ an\ array\ to\ hold\ the\ location\ points\ of\ the\ moving\ object\ (energy)\ so\ that\ projectile\ knows\ if\ collision\ has\ occured\ \n\ \ \ \ //Create\ excess\ space\ if\ other\ points\ are\ added\ if\ the\ feature\ of\ creating\ new\ resource\ formats\ is\ created\ \n\ \ \ \ private\ static\ final\ int\ NUM_POINTS\ \=\ 20;\ //constants\ should\ be\ on\ top\ but\ it's\ easier\ if\ it's\ here\ \n\ \ \ \ Location[]\ collisionPoints\ \=\ new\ Location[NUM_POINTS];\ \n
+comment1.params=point
+comment1.target=void\ onMouseMove(objectdraw.Location)
+comment2.params=point
+comment2.target=void\ onMouseEnter(objectdraw.Location)
+comment3.params=point
+comment3.target=void\ onMouseExit(objectdraw.Location)
+comment4.params=point
+comment4.target=void\ onMousePress(objectdraw.Location)
+comment5.params=point
+comment5.target=void\ onMouseClick(objectdraw.Location)
+comment6.params=point
+comment6.target=void\ onMouseRelease(objectdraw.Location)
+comment7.params=point
+comment7.target=void\ onMouseDrag(objectdraw.Location)
+numComments=8

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=centerInit\ width\ height\ canvas
+comment0.target=RotatableRect(objectdraw.Location,\ double,\ double,\ objectdraw.DrawingCanvas)
+comment1.params=finalAngle
+comment1.target=void\ rotation(double)
+comment2.params=x\ y
+comment2.target=void\ moveTo(double,\ double)
+comment3.params=dx\ dy
+comment3.target=void\ move(double,\ double)
+numComments=4

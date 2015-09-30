@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=centerInit\ width\ height\ canvas\ aTemp\ bTemp\ cTemp\ dTemp
+comment0.target=ResourceFormat(objectdraw.Location,\ double,\ double,\ objectdraw.DrawingCanvas,\ double,\ double,\ double,\ double)
+comment1.params=finalAngle\ a\ b\ c\ d
+comment1.target=void\ rotation(double,\ double,\ double,\ double,\ double)
+comment2.params=x\ y
+comment2.target=void\ moveTo(double,\ double)
+comment3.params=dx\ dy
+comment3.target=void\ move(double,\ double)
+comment4.params=
+comment4.target=void\ run()
+numComments=5

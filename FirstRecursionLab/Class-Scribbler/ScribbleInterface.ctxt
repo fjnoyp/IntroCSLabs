@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=point
+comment0.target=boolean\ contains(objectdraw.Location)
+comment1.params=xOffset\ yOffset
+comment1.target=void\ move(double,\ double)
+comment2.params=color
+comment2.target=void\ setColor(java.awt.Color)
+comment3.params=
+comment3.target=void\ removeFromCanvas()
+numComments=4

@@ -1,0 +1,35 @@
+import objectdraw.*;
+import java.awt.*;
+
+/**
+ *   CS 134 Laboratory 1 / Section X
+ *   YOUR NAME
+ *   DATE
+ */
+public class NoClicking extends WindowController {
+
+   public void onMouseClick(Location point) {
+     // commands placed here are executed after the user clicks the mouse
+   }
+
+   public void begin() {
+     // commands placed here are executed when the program begins to execute
+   }
+
+   public void onMouseEnter(Location point) {
+     // commands placed here are executed when the mouse enters the program window
+   }
+
+   public void onMouseExit(Location point) {
+     // commands placed here are executed when the mouse leaves the program window
+   }
+
+   public void onMousePress(Location point) {
+     // commands placed here are executed when the mouse button is depressed
+   }
+
+   public void onMouseRelease(Location point) {
+     // commands placed here are executed when the mouse button is released
+   }
+
+}

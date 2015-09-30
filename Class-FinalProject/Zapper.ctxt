@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=point\ score\ canvas
+comment0.target=Zapper(objectdraw.Location,\ ScoreKeeper,\ objectdraw.DrawingCanvas)
+comment1.params=
+comment1.target=void\ left()
+comment2.params=
+comment2.target=void\ right()
+comment3.params=field\ centipede
+comment3.target=void\ shoot(Field,\ Centipede)
+comment4.params=image
+comment4.target=boolean\ overlaps(objectdraw.VisibleImage)
+numComments=5

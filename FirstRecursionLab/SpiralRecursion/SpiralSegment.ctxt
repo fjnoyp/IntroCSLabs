@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=last\ thisLine\ canvas
+comment0.target=SpiralSegment(Segment,\ objectdraw.Line,\ objectdraw.DrawingCanvas)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ SpiralSegment\n
+comment1.params=
+comment1.target=objectdraw.Location\ returnLocation()
+comment2.params=
+comment2.target=Segment\ getLast()
+comment3.params=
+comment3.target=void\ removeFromCanvas()
+numComments=4

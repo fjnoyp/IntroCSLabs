@@ -1,0 +1,24 @@
+import java.awt.*;
+import objectdraw.*;
+
+public class Centipede extends ActiveObject {
+    
+    // offset between segments when they are created
+    static private final int SEGMENT_OFFSET_X = 12;
+    
+    // pause time between moving all of the segments
+    static private final int CENTIPEDE_PAUSE = 25;
+   
+    
+    
+    public Centipede(  ) {
+        
+        this.start();
+    }
+    
+    public void run() {
+        
+        
+    }
+    
+}

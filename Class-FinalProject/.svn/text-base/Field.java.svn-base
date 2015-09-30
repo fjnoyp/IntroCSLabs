@@ -1,0 +1,46 @@
+import java.awt.*;
+import objectdraw.*;
+
+public class Field {
+    
+    // The following two constants are declared to be "public"
+    // so that other classes can refer to them.  We did this here
+    // because the size of the canvas, the motion of the segments,
+    // and other aspects of the grame are all dependent on how
+    // wide and tall the mushrooms are.  See CentipedeController
+    // for an example of how to refer to public static constants
+    // in other classes.
+
+    // dimensions of the canvas
+    static public final int CANVAS_WIDTH = 400;
+    static public final int CANVAS_HEIGHT = 512;
+    
+    // size of mushroom pictures
+    static private final int SHROOM_SIZE = 16;  
+    
+    // dimensions of the mushroom array
+    static private final int NUM_ROWS = CANVAS_HEIGHT / SHROOM_SIZE;
+    static private final int NUM_COLS = CANVAS_WIDTH / SHROOM_SIZE;
+    
+
+    
+    
+    
+    
+    ////// Helper methods to convert between (x,y) coordinates 
+    ////// on the canvas and row and columns in the mushroom 
+    ////// 2D array.
+    
+    // Convert a y coordinate in pixels to the corresponding
+    //   row in the mushroom array
+    private int getRow(double y) {
+        return (int)(y / SHROOM_SIZE);
+    }
+    
+    // Convert a x coordinate in pixels to the corresponding
+    //   column in the mushroom array
+    private int getColumn(double x) {
+        return (int)(x / SHROOM_SIZE);
+    }
+  
+}

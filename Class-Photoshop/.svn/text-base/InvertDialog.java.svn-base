@@ -1,0 +1,78 @@
+import javax.swing.*;
+import objectdraw.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+import cs134lib.*;
+
+/*
+ * Your Name and Lab Here...
+ * 
+ * A dialog box that takes a visible image and inverts the
+ * shade of each pixel. 
+ */
+public class InvertDialog extends JDialog implements ActionListener {
+
+  // Location and size of dialog box
+  private static final int LOCATION_X = 400;
+  private static final int LOCATION_Y = 200;
+  private static final int WIDTH = 250;
+  private static final int HEIGHT = 140;
+
+  // Buttons to accept or reject the change.
+  private JButton okButton = new JButton("OK");
+  private JButton cancelButton = new JButton("Cancel");
+  
+  // The image display in the canvas of the main window
+  private VisibleImage display;
+
+  // The Image representation of the displayed image prior to transforming it.
+  private Image original;
+
+  public InvertDialog() {
+    // configure the title, screen location, size, etc. of the dialog box
+    this.setModal(true);
+    this.setTitle(this.getClass().getName());
+    this.setLocation(LOCATION_X,LOCATION_Y);
+    this.setSize(WIDTH, HEIGHT);
+    this.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+
+    // add the ok and cancel buttons to the dialog box
+    Container contentPane = this.getContentPane();
+    JPanel buttons = new JPanel();
+    buttons.add(okButton);
+    buttons.add(cancelButton);
+    contentPane.add(buttons, BorderLayout.SOUTH);
+    contentPane.validate();
+
+    // listen for events on our buttons
+    okButton.addActionListener(this);
+    cancelButton.addActionListener(this);
+  }
+
+  /*
+   * Apply the image transformation and ask user to accept/reject.
+   */
+  public void applyAdjustment(VisibleImage theDisplay) {
+    // remember the visible image we are to update, as well as the
+    //   image currently being shown.
+    display = theDisplay;
+    original = display.getImage(); 
+    this.adjustImage();
+    this.setVisible(true);
+  }
+
+  /*
+   * Handle both button events.  Right now, we just close
+   * the dialog box by setting it to not be visible.
+   */
+  public void actionPerformed(ActionEvent e) {
+    this.setVisible(false);
+  }
+
+  /*
+   * Applies the desired transformation to the image.
+   */
+  protected void adjustImage() { /* change */ }
+
+}

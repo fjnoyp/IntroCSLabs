@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=shroomImage\ shroomCount\ aCanvas
+comment0.target=Field(java.awt.Image,\ int,\ objectdraw.DrawingCanvas)
+comment1.params=point
+comment1.target=boolean\ overlapsShroom(objectdraw.Location)
+comment2.params=x\ y
+comment2.target=void\ showShroom(double,\ double)
+comment3.params=x\ y
+comment3.target=void\ hideShroom(double,\ double)
+comment4.params=y
+comment4.target=int\ getRow(double)
+comment5.params=x
+comment5.target=int\ getColumn(double)
+numComments=6

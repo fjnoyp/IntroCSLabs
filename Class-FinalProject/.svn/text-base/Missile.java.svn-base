@@ -1,0 +1,16 @@
+
+import java.awt.*;
+import objectdraw.*;
+
+public class Missile extends ActiveObject {
+    
+    public Missile( ) {
+
+        this.start();
+    }
+    
+    public void run() {
+
+    }
+    
+}

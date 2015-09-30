@@ -1,0 +1,138 @@
+
+import objectdraw.*;
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+/**
+ * Concentration
+ */
+public class Concentration extends WindowController implements ActionListener {
+
+    // Width and height of each Card.
+    private static final int CARD_SIZE = 100;
+
+    // Initial window dimensions, and approximate height of
+    //   button panel.
+    private static final int INITIAL_WIDTH = CARD_SIZE * 6;
+    private static final int INITIAL_HEIGHT = CARD_SIZE * 5;
+    private static final int BUTTON_HEIGHT = 80;
+
+    // All of the cards on the screen
+    private CardCollection cards;
+
+    // The card selected and showing, if any
+    private Card selectedCard = null;
+
+    // The last fader created to make Cards appear and fade, and
+    //   the last mover created to make Cards move on the screen.
+    private Fader lastFader;
+    private Mover lastMover;
+
+    // The GUI buttons
+    private JButton hintButton;
+    private JButton shuffleButton;
+
+    // A constant array of names of all the images to use on the Cards.
+    private static final String imageNames[] = {
+            "calvin1.png",
+            "calvin2.png",
+            "calvin3.png",
+            "calvin4.png",
+            "calvin5.png",
+            "calvin6.png"
+        };
+
+    /*
+     * Set up canvas, buttons, and card collection.
+     */
+    public void begin() {
+
+        this.resize(INITIAL_WIDTH, INITIAL_HEIGHT + BUTTON_HEIGHT);
+
+        // Create buttons and set up listeners
+        hintButton = new JButton("Hint");
+        shuffleButton = new JButton("Shuffle");
+        hintButton.addActionListener(this);
+        shuffleButton.addActionListener(this);
+
+        // Add the buttons to the SOUTH part of the window
+        JPanel buttons = new JPanel();
+        buttons.add(hintButton);
+        buttons.add(shuffleButton);
+        this.getContentPane().add(buttons, BorderLayout.SOUTH);
+        this.validate();
+
+        // since there is no selected card, disable the hints button
+        hintButton.setEnabled(false);
+
+        cards = new CardCollection(0);  // change me
+
+        // insert code here to initialize contents of collection
+
+    }
+
+    /* 
+     *  Return the card in the cards collection at the given point.
+     *  That card should become the "top-most" card.
+     *  Return null if no cards are at the point.
+     */
+    private Card findSelected(Location point) {
+        return null;
+    }
+
+    /*
+     * Handle clicks n the canvas
+     */
+    public void onMouseClick(Location pt) {
+        // Ignore clicks if a fader or mover is running
+        if (!this.isAnimating()) {
+
+            if (selectedCard == null) {
+                selectedCard = this.findSelected(pt);
+
+                // insert code to handle when first card is selected.
+
+            } else {
+                Card secondSelected = this.findSelected(pt);
+
+                // is it a valid card and not the same as the first card selected?
+                if (secondSelected != null && secondSelected != selectedCard) {
+
+                    // insert code to handle when second card is selected
+
+                    selectedCard = null;
+                }
+            }
+
+            // The hint button is enabled only when we have a selectedCard.
+            // The shuffle button is the opposite.
+            hintButton.setEnabled(selectedCard != null);
+            shuffleButton.setEnabled(selectedCard == null);
+
+        }
+    }
+
+    /*
+     * Handle button presses
+     */
+    public void actionPerformed(ActionEvent e) {
+        // Ignore events if a fader or mover is running
+        if (!this.isAnimating()) {
+
+            // insert code to handle button presses.
+
+        }
+    }
+
+    /*
+     * Returns true if there is a mover or fader currently animating
+     * the Cards on the screen.
+     */
+    public boolean isAnimating() {
+        return (lastMover != null && !lastMover.isDone()) 
+            || (lastFader != null && !lastFader.isDone());
+    }
+
+}

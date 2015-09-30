@@ -1,0 +1,68 @@
+
+import objectdraw.*;
+import java.awt.Color;
+
+/**
+ * Fader 
+ * 
+ * An ActiveObject to make all Cards in a collection show their faces
+ * and then gradually fade back to having them hidden.
+ * 
+ * A Fader can optionally remove all cards from the canvas after they
+ * are done fading.
+ */
+public class Fader extends ActiveObject {
+
+    // Delay time between changing the transparency of the cards.
+    private static final int PAUSE_TIME = 5;
+
+    // The cards to fade
+    private CardCollection cards;
+    
+    // Determines whether to remove the cards from the canvas after
+    //   fading them
+    private boolean removeAfterFade;
+    
+    // Will be true when the Fader is done fading the cards.
+    private boolean done = false;
+
+    /*
+     * Create and start a new Fader object.  Pass in the collection of
+     * cards to fade and whether they should be remove from the canvas.
+     */
+    public Fader(CardCollection cards, boolean removeAfterFade) {
+        this.cards = cards;
+        this.removeAfterFade = removeAfterFade;
+        this.start();
+    }
+
+    public void run() {
+
+        // For each level of transparency, adjust the transparency of
+        //   each card in the collection
+        for (int level = 0; level < 256; level++) {
+            for (int i = 0; i < cards.size(); i++) {
+                cards.cardAtIndex(i).setCoverTransparency(level);
+            }
+            pause(PAUSE_TIME);
+        }
+
+        // Remove all cards from the canvas, if necessary
+        if (removeAfterFade) {
+            for (int i = 0; i < cards.size(); i++) {
+                cards.cardAtIndex(i).removeFromCanvas();
+            }
+        }
+        
+        // Record that we are finished running
+        done = true;
+    }
+    
+    /*
+     * Return whether or not the Fader is done running.
+     */
+    public boolean isDone() {
+        return done;
+    }
+
+}

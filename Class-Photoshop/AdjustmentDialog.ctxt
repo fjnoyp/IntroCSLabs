@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AdjustmentDialog()
+comment1.params=theDisplay
+comment1.target=void\ applyAdjustment(objectdraw.VisibleImage)
+comment1.text=\n\ Apply\ the\ image\ transformation\ and\ ask\ user\ to\ accept/reject.\ \ \n
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment2.text=\n\ Handle\ both\ button\ events.\ \ Right\ now,\ we\ just\ close\n\ the\ dialog\ box\ by\ setting\ it\ to\ not\ be\ visible.\n
+comment3.params=
+comment3.target=void\ adjustImage()
+comment3.text=\n\ Applies\ the\ desired\ transformation\ to\ the\ image.\ \ Make\ separate\ color\ arrays\ for\ each\ color\ value,\ r,\ g,\ b\ and\ apply\n\ the\ adjustPixelArray\ method\ to\ each\ color\ spectrum\ \n
+comment4.params=pixels
+comment4.target=int[][]\ adjustPixelArray(int[][])
+numComments=5

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=x\ y\ count\ currentLength\ angle\ color\ maxBranches\ branchVectorRef\ canvas
+comment0.target=TreeV(double,\ double,\ int,\ double,\ double,\ java.awt.Color,\ int,\ java.util.Vector,\ objectdraw.DrawingCanvas)
+comment1.params=
+comment1.target=void\ run()
+comment2.params=dx\ dy
+comment2.target=void\ move(double,\ double)
+comment2.text=\n\ \ \ \ public\ Location\ thisEnd()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ Location\ End\ \=\ new\ Location(startX+branchLength*1.25*Math.cos(degreeI),\ startY+branchLength*1.25*Math.sin(degreeI));\n\ \ \ \ \ \ \ \ return\ End;\n\ \ \ \ }\n\ \ \ \ public\ void\ moveTo(Location\ point)\n\ \ \ \ {\n\ \ \ \ \ \ \ \ this.moveTo(point);\ \n\ \ \ \ }\n
+numComments=3

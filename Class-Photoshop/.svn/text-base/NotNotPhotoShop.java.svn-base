@@ -1,0 +1,65 @@
+import cs134lib.*;
+import objectdraw.*;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+/*
+ * Your Name and Lab
+ * 
+ * Description...
+ */
+public class NotNotPhotoShop extends WindowController implements ActionListener {
+
+  // Size of window when created
+  private static final int WINDOW_WIDTH = 640;
+  private static final int WINDOW_HEIGHT = 560;
+
+  // Buttons to open a new image file and take a picture
+  //   with the camera
+  private JButton openFileButton;
+  private JButton snapshotButton;
+
+  // The image we are editing
+  private VisibleImage display;
+
+  /*
+   * Create the GUI components and load the original image from the harddrive. 
+   * You will change this method when adding new componenets to the interface.
+   */
+  public void begin() {
+    
+    this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+    
+    // Create the buttons and add them to the window 
+    openFileButton = new JButton("Open");
+    snapshotButton = new JButton("Take Picture");
+    
+    JPanel bottomPanel = new JPanel();
+    bottomPanel.add(openFileButton);
+    bottomPanel.add(snapshotButton);
+
+    // Add the components to the window
+    Container contentPane = getContentPane();
+    contentPane.add(bottomPanel, BorderLayout.SOUTH);
+    contentPane.validate();
+
+    // Make me listen for button clicks
+    snapshotButton.addActionListener(this);
+    openFileButton.addActionListener(this);
+    
+    // load the beach scene at startup
+    display = new VisibleImage(getImage("gray-1.jpg"), 0, 0, canvas);
+  }
+
+  /*
+   * Handle events from the buttons.
+   */
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource() == openFileButton) {
+      // add code here to load file
+    } else if (e.getSource() == snapshotButton) {
+      // add code here to use camera
+    } 
+  }
+}

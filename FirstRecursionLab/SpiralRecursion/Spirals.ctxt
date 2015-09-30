@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ begin()
+comment1.params=event
+comment1.target=void\ stateChanged(javax.swing.event.ChangeEvent)
+comment2.params=point
+comment2.target=void\ onMouseMove(objectdraw.Location)
+comment3.params=
+comment3.target=void\ Spiral()
+numComments=4

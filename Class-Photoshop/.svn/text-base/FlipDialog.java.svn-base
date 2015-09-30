@@ -1,0 +1,10 @@
+import javax.swing.*;
+import objectdraw.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+import cs134lib.*;
+
+public class FlipDialog {
+
+}

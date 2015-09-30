@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=centerInit\ canvas
+comment0.target=Platform(objectdraw.Location,\ objectdraw.DrawingCanvas)
+comment1.params=x\ y
+comment1.target=void\ moveTo(double,\ double)
+comment2.params=dx\ dy
+comment2.target=void\ move(double,\ double)
+comment3.params=finalAngle\ point
+comment3.target=void\ cannonRotation(double,\ objectdraw.Location)
+comment4.params=point\ angle\ power\ scoreRef\ scoreNum\ resource
+comment4.target=void\ fire(objectdraw.Location,\ double,\ double,\ objectdraw.Text,\ int,\ ResourceFormat)
+comment5.params=
+comment5.target=void\ run()
+numComments=6

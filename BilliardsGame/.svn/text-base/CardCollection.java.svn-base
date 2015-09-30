@@ -1,0 +1,48 @@
+import objectdraw.*;
+import java.awt.*;
+
+/*
+ * CardCollection
+ * 
+ * A general collection class to store Cards.
+ */
+public class CardCollection {
+
+    // Create a new collection with a maximum capacity of maxSize.
+    public CardCollection(int maxSize) {
+        // change me
+    }
+
+    // Add a card to the collection.
+    public void add(Card card) {
+        // change me
+    }
+
+    // Return the first card containing point, starting from the most
+    //   recently added card.
+    public Card cardAtLocation(Location point) {
+        return null;  // change me
+    }
+
+    // Remove a Card from the collection.
+    public void remove(Card card) {
+        // change me
+    }
+
+    // Return the number of cards currently stored in the collection.
+    public int size() {
+        return 0; // change me
+    }   
+
+    // Return the card at the given position in the collection.
+    // The index parameter must be between 0 and size() - 1.
+    public Card cardAtIndex(int index) {
+        return null; // change me
+    }   
+
+    // Return a new collection containing all Cards that
+    //   have the given image.
+    CardCollection cardsWithImage(Image image) {
+        return null;  // change me
+    }
+}

@@ -1,0 +1,17 @@
+
+import objectdraw.*;
+import java.awt.*;
+
+public class Segment {
+
+    // width of segment image
+    static private final int SEGMENT_WIDTH = 16;  
+
+    // number of pixels a segment should travel in the X direction 
+    static private final int SEGMENT_STEP_X = SEGMENT_WIDTH / 4;
+    
+    // number of pixels a segment should travel in the Y direction
+    static private final int SEGMENT_STEP_Y = 16;
+  
+
+}

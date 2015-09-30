@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=ballArray
+comment0.target=PhysicsController(BilliardBall[])
+comment1.params=
+comment1.target=void\ run()
+comment2.params=objectA\ objectB\ minDistance
+comment2.target=void\ collision(BilliardBall,\ BilliardBall,\ double)
+comment3.params=distance\ angle\ resultAngle\ cos\ sin\ objectA\ objectB
+comment3.target=void\ collisionReaction(double,\ double,\ double,\ double,\ double,\ BilliardBall,\ BilliardBall)
+numComments=4

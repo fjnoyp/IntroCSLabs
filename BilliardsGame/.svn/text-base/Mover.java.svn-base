@@ -1,0 +1,77 @@
+
+import objectdraw.*;
+
+/**
+ * Mover
+ * 
+ * An ActiveObject to move all the cards in a Card collection to
+ * new random locations.
+ */
+public class Mover extends ActiveObject {
+
+    // Number of steps used to move cards to their new locations, and
+    //  how long to pause between steps
+    private static final int STEPS = 100;
+    private static final int PAUSE_TIME = 10;
+
+    // The cards to move
+    private CardCollection cards;
+
+    // Generators for picking new locations for the cards
+    private RandomDoubleGenerator randomX;
+    private RandomDoubleGenerator randomY;
+
+    // Whether or not we are done moving the cards
+    private boolean done = false;
+
+    /*
+     * Create a new mover by providing the cards to move, and the maximum
+     * x and y coordinates for their new locations
+     */
+    public Mover(CardCollection cards, double maxX, double maxY) {
+        this.cards = cards;       
+        randomX = new RandomDoubleGenerator(0, maxX);
+        randomY = new RandomDoubleGenerator(0, maxY);
+
+        this.start();
+    }
+
+    public void run() {
+        // Arrays to store how far each card should move on each step
+        //  For example, dx[i], dy[i] is how far to move the Card and index i
+        //  in the collection.
+        double[] dx = new double[cards.size()];
+        double[] dy = new double[cards.size()];
+        
+        for (int i = 0; i < cards.size(); i++) {
+            
+            Card card = cards.cardAtIndex(i);
+            
+            // compute relative move based on new random location and current location.
+            dx[i] = (randomX.nextValue() - card.getLocation().getX()) / STEPS;
+            dy[i] = (randomY.nextValue() - card.getLocation().getY()) / STEPS;
+        }
+
+        
+        // Perform STEPS iterations of moving each card by the amoung
+        //  computed above
+        for (int i = 0; i < STEPS; i++) {
+            for (int c = 0; c < cards.size(); c++) {
+                cards.cardAtIndex(c).move(dx[c], dy[c]);
+            }
+            pause(PAUSE_TIME);
+        }
+        
+        // Record that we are done running
+        done = true;
+    }
+
+    /*
+     * Return whether or not we are done running.
+     */
+    public boolean isDone() {
+        return done;
+    }
+
+}
+

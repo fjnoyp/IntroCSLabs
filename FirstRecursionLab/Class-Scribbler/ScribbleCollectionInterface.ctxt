@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=point
+comment0.target=ScribbleInterface\ scribbleSelected(objectdraw.Location)
+comment1.params=
+comment1.target=ScribbleInterface\ getFirst()
+comment2.params=
+comment2.target=ScribbleCollectionInterface\ getRest()
+numComments=3
